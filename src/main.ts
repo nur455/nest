@@ -40,23 +40,23 @@ async function bootstrap() {
 	};
 	await toolService.writeProcLog(procLog, startMessage);
 
-	// TODO Может есть другой патерн для этого?
-	process.on('SIGINT', async () => {
-		// console.log('SIGINT. Close');
-		const errStr = 'process.on SIGINT closeMongoClient Shutdown';
-		const errDetailStr = '';
-		await toolService.writeProcErrLog(procLog, errStr, errDetailStr);
-		await databaseService.closeMongoClient();
-		process.exit(1);
-	});
+	// // TODO Может есть другой патерн для этого?
+	// process.on('SIGINT', async () => {
+	// 	// console.log('SIGINT. Close');
+	// 	const errStr = 'process.on SIGINT closeMongoClient Shutdown';
+	// 	const errDetailStr = '';
+	// 	await toolService.writeProcErrLog(procLog, errStr, errDetailStr);
+	// 	await databaseService.closeMongoClient();
+	// 	process.exit(1);
+	// });
 
-	process.on('SIGTERM', async () => {
-		// console.log('SIGTERM. Close');
-		const errStr = 'process.on SIGTERM closeMongoClient Shutdown';
-		const errDetailStr = '';
-		await toolService.writeProcErrLog(procLog, errStr, errDetailStr);
-		await databaseService.closeMongoClient();
-		process.exit(1);
-	});
+	// process.on('SIGTERM', async () => {
+	// 	// console.log('SIGTERM. Close');
+	// 	const errStr = 'process.on SIGTERM closeMongoClient Shutdown';
+	// 	const errDetailStr = '';
+	// 	await toolService.writeProcErrLog(procLog, errStr, errDetailStr);
+	// 	await databaseService.closeMongoClient();
+	// 	process.exit(1);
+	// });
 }
 bootstrap();
