@@ -1,12 +1,6 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from './database/database.module';
-import { ToolModule } from './tool/tool.module';
 import { AuthModule } from './auth/auth.module';
-import { ProductModule } from './product/product.module';
-import { ScheduleModule } from './schedule/schedule.module';
-import { RoomModule } from './room/room.module';
-import { UsersModule } from './users/users.module';
-import { FileModule } from './file/file.module';
 
 /*
 TODO не могу понять, где задается порядок инициализации модулей
@@ -23,6 +17,6 @@ TODO не могу понять, где задается порядок иниц
 */
 
 @Module({
-	imports: [DatabaseModule, ToolModule, AuthModule, ProductModule, ScheduleModule, RoomModule, UsersModule, FileModule]
+	imports: [DatabaseModule, AuthModule]
 })
 export class AppModule {}
