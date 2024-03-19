@@ -1,0 +1,43 @@
+{
+	"port": 20000,
+	"db3": {
+		"/host": "192.168.66.139",
+		"host": "cluster0.hg6hd77.mongodb.net",
+		"port": 40514,
+		"dbname": "nestdb",
+		"user": "nur455",
+		"password": "Kakadu455",
+		"text": "agis-mongo-db-bil"
+	},
+	"db2": {
+		"host": "192.168.66.139",
+		"port": 40504,
+		"dbname": "agisbil",
+		"text": "agis-mongo-db-bil-asa"
+	},
+	"elastic": {
+		"host": "192.168.66.139",
+		"//host": "192.168.64.133",
+		"/host": "192.168.64.132",
+		"port": 40515,
+		"////host": "agis-elastic-db-bil",
+		"/port": 9200
+	},
+	"auth": {
+		"host": "192.168.66.105",
+		"/host": "192.168.66.139",
+		"//host": "192.168.64.132",
+		"/port": "30366",
+		"port": "30385"
+	},
+	"postgis": {
+		"host": "192.168.66.139",
+		"port": 41303,
+		"port-astana-kotel": 42403,
+		"port-kos-scada": 41303,
+		"port-semey": 43103,
+		"dbname": "postgres",
+		"user": "postgres",
+		"password": "Devirpostgis"
+	}
+}
